@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Fill Form",
+    "version": "3.7",
+    "description": "Fill form with page is loaded",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+      "16": "assets/images/icon.png",
+      "48": "assets/images/icon.png",
+      "128": "assets/images/icon.png"
+    }
+    },
+    "content_scripts": [
+      {
+        "js": ["assets/js/jquery.min.js", "assets/js/content.js"],
+        "matches": [
+          "http://*/*",
+          "https://*/*"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
